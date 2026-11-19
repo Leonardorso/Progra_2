@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-14T17:00:00.000Z" agent="ChatGPT - C4 y UML para BusReserva UCB con memoria temporal">
+  <diagram id="mem_n1" name="C4 1 - Contexto">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="830" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1title" value="C4 Nivel 1 - Contexto del sistema" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontColor=#173B61;fontSize=26;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="20" width="1000" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p1student" value="&lt;b&gt;Estudiante UCB&lt;/b&gt;&lt;br&gt;[Persona]&lt;br&gt;Consulta salidas; reserva o cancela un cupo;&lt;br&gt;presenta carnet estudiantil físico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#173B61;fontColor=#FFFFFF;strokeColor=#173B61;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="70" y="155" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p1staff" value="&lt;b&gt;Personal de transporte&lt;/b&gt;&lt;br&gt;[Administrador presencial]&lt;br&gt;Consulta lista de reservas, coteja carnet&lt;br&gt;y confirma el abordaje" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#173B61;fontColor=#FFFFFF;strokeColor=#173B61;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="730" y="155" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p1sys" value="&lt;b&gt;BusReserva UCB&lt;/b&gt;&lt;br&gt;[Aplicación web en Java]&lt;br&gt;Organiza reservas por ruta, fecha y horario&lt;br&gt;para reducir la incertidumbre de las filas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2367A3;fontColor=#FFFFFF;strokeColor=#13507D;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="275" y="425" width="550" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="p1note" value="&lt;b&gt;Problema:&lt;/b&gt; largas filas, calor, personas que se adelantan, riesgo de quedarse sin asiento y costos de transporte alternativo.&lt;br&gt;&lt;b&gt;Alcance de la demostración:&lt;/b&gt; datos simulados en memoria; cotejo manual del carnet; no se escanea el QR ni se almacenan fotos de carnets." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FC;fontColor=#294A60;strokeColor=#A3BACD;arcSize=10;align=left;verticalAlign=middle;spacing=14;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="100" y="660" width="900" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1e1" value="Reserva / consulta" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p1student" target="p1sys">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1e2" value="Lista / valida abordaje" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p1staff" target="p1sys">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mem_n2" name="C4 2 - Contenedores">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1130" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2title" value="C4 Nivel 2 - Contenedores de la aplicacion" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontColor=#173B61;fontSize=26;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="20" width="1040" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p2stu" value="&lt;b&gt;Estudiante&lt;/b&gt;&lt;br&gt;[Persona]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#173B61;fontColor=#FFFFFF;strokeColor=#173B61;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="65" y="140" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2staff" value="&lt;b&gt;Personal de transporte&lt;/b&gt;&lt;br&gt;[Administrador]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#173B61;fontColor=#FFFFFF;strokeColor=#173B61;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="830" y="140" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2nav" value="&lt;b&gt;Navegador web&lt;/b&gt;&lt;br&gt;[Celular o PC]&lt;br&gt;Páginas HTML y formularios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5C6974;fontColor=#FFFFFF;strokeColor=#3C4F5F;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="385" y="155" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p2lim" value="Sistema BusReserva UCB - un solo proceso Java" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#4D667A;strokeColor=#A3BACD;dashed=1;dashPattern=8 6;arcSize=8;align=left;verticalAlign=top;spacingTop=10;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="180" y="375" width="760" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="p2app" value="&lt;b&gt;Aplicación web&lt;/b&gt;&lt;br&gt;[Java 21 + Javalin]&lt;br&gt;Horarios, reservas, lista de pasajeros y validación presencial.&lt;br&gt;Guarda usuarios, viajes y reservas en Map / List de Java." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2367A3;fontColor=#FFFFFF;strokeColor=#13507D;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="285" y="460" width="550" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p2inside" value="&lt;b&gt;Memoria temporal:&lt;/b&gt; los registros son compartidos por quienes acceden al mismo servidor Java. Se pierden cuando se reinicia el programa. No hay MySQL, JDBC ni servicio de base de datos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FC;fontColor=#294A60;strokeColor=#A3BACD;arcSize=10;align=left;verticalAlign=middle;spacing=14;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="230" y="665" width="660" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="p2note" value="&lt;b&gt;Decisión técnica:&lt;/b&gt; el almacenamiento es una parte interna de la aplicación, no un contenedor independiente. Una versión real de producción necesitaría persistencia, control de acceso institucional y un procedimiento oficial de embarque." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FC;fontColor=#294A60;strokeColor=#A3BACD;arcSize=10;align=left;verticalAlign=middle;spacing=14;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="120" y="775" width="890" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p2e1" value="Reserva desde celular" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p2stu" target="p2nav">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2e2" value="Control en parada" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p2staff" target="p2nav">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2e3" value="HTTP - interfaz web" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p2nav" target="p2app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mem_n3" name="C4 3 - Componentes">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1310" pageHeight="1030" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3title" value="C4 Nivel 3 - Componentes internos de la aplicacion Java" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontColor=#173B61;fontSize=25;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1200" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="p3nav" value="&lt;b&gt;Navegador&lt;/b&gt;&lt;br&gt;[Cliente web]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5C6974;fontColor=#FFFFFF;strokeColor=#3C4F5F;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="485" y="105" width="340" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p3lim" value="Dentro del proceso Java 21 + Javalin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#4D667A;strokeColor=#A3BACD;dashed=1;dashPattern=8 6;arcSize=8;align=left;verticalAlign=top;spacingTop=10;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="90" y="250" width="1130" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="p3ctl" value="&lt;b&gt;ControladoresWeb&lt;/b&gt;&lt;br&gt;[Javalin]&lt;br&gt;Formularios del estudiante y panel del personal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2367A3;fontColor=#FFFFFF;strokeColor=#13507D;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="470" y="305" width="370" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3sr" value="&lt;b&gt;ServicioReservas&lt;/b&gt;&lt;br&gt;Reservar, cancelar, impedir duplicados&lt;br&gt;y marcar el abordaje tras validar carnet" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#087F8C;fontColor=#FFFFFF;strokeColor=#075E68;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="185" y="505" width="390" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3sh" value="&lt;b&gt;ServicioHorarios&lt;/b&gt;&lt;br&gt;Consulta salidas, calcula cupos&lt;br&gt;según número y capacidad de buses" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#087F8C;fontColor=#FFFFFF;strokeColor=#075E68;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="735" y="505" width="390" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3mem" value="&lt;b&gt;RepositorioReservasMemoria&lt;/b&gt;&lt;br&gt;[Colecciones Java: Map / List]&lt;br&gt;Estudiantes registrados, horarios, viajes, reservas y estados de abordaje" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#466D98;fontColor=#FFFFFF;strokeColor=#244E71;strokeWidth=1.5;arcSize=12;align=center;verticalAlign=middle;spacing=10;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="705" width="470" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p3note" value="&lt;b&gt;Verificación presencial:&lt;/b&gt; el personal selecciona la salida, busca al estudiante por código o nombre, compara los datos visibles con el carnet físico y marca ABORDADA. No necesita leer el QR del carnet. &lt;b&gt;Regla:&lt;/b&gt; una reserva activa por estudiante y viaje." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FC;fontColor=#294A60;strokeColor=#A3BACD;arcSize=10;align=left;verticalAlign=middle;spacing=14;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="100" y="936" width="1110" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="p3e0" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p3nav" target="p3ctl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3e1" value="Reserva / abordaje" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p3ctl" target="p3sr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3e2" value="Consulta viajes" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p3ctl" target="p3sh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3e3" value="Leer / actualizar" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p3sr" target="p3mem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3e4" value="Consultar horarios" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p3sh" target="p3mem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mem_n4" name="C4 4 - Codigo UML de clases">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1510" pageHeight="1130" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p4title" value="C4 Nivel 4 - UML de clases (version simplificada sin MySQL)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontColor=#173B61;fontSize=25;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="15" width="1410" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p4usu" value="&lt;i&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Usuario&lt;/b&gt;&lt;hr&gt;- codigo: String&lt;br&gt;- nombre: String&lt;hr&gt;+ getRol(): String {abstract}" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="105" width="350" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="p4stu" value="&lt;b&gt;Estudiante&lt;/b&gt;&lt;hr&gt;+ getRol(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="165" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="p4adm" value="&lt;b&gt;Administrador&lt;/b&gt;&lt;hr&gt;+ getRol(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="235" y="390" width="175" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="p4srv" value="&lt;b&gt;ServicioReservas&lt;/b&gt;&lt;hr&gt;- repositorio: RepositorioReservas&lt;hr&gt;+ reservar(Estudiante, Viaje): Reserva&lt;br&gt;+ cancelar(Estudiante, Viaje): void&lt;br&gt;+ confirmarAbordaje(Administrador, Reserva): void&lt;br&gt;+ listarPorViaje(Viaje): List&amp;lt;Reserva&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="465" y="105" width="465" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p4int" value="&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;RepositorioReservas&lt;/b&gt;&lt;hr&gt;+ guardar(Reserva): void&lt;br&gt;+ buscarPorViaje(Viaje): List&amp;lt;Reserva&amp;gt;&lt;br&gt;+ buscarPorCodigo(String): Estudiante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="105" width="410" height="183" as="geometry" />
+        </mxCell>
+        <mxCell id="p4rep" value="&lt;b&gt;RepositorioReservasMemoria&lt;/b&gt;&lt;hr&gt;- estudiantes: Map&amp;lt;String, Estudiante&amp;gt;&lt;br&gt;- reservas: Map&amp;lt;String, Reserva&amp;gt;&lt;br&gt;- viajes: Map&amp;lt;String, Viaje&amp;gt;&lt;hr&gt;+ guardar(Reserva): void&lt;br&gt;+ buscarPorViaje(Viaje): List&amp;lt;Reserva&amp;gt;&lt;br&gt;+ buscarPorCodigo(String): Estudiante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="385" width="410" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="p4res" value="&lt;b&gt;Reserva&lt;/b&gt;&lt;hr&gt;- estudiante: Estudiante&lt;br&gt;- viaje: Viaje&lt;br&gt;- estado: EstadoReserva&lt;hr&gt;+ cancelar(): void&lt;br&gt;+ marcarAbordada(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="465" y="425" width="465" height="212" as="geometry" />
+        </mxCell>
+        <mxCell id="p4state" value="&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;EstadoReserva&lt;/b&gt;&lt;hr&gt;CONFIRMADA&lt;br&gt;CANCELADA&lt;br&gt;ABORDADA" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="710" width="355" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="p4via" value="&lt;b&gt;Viaje&lt;/b&gt;&lt;hr&gt;- horario: Horario&lt;br&gt;- fecha: LocalDate&lt;br&gt;- cuposTotales: int&lt;hr&gt;+ getCuposDisponibles(): int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="465" y="710" width="465" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p4hor" value="&lt;b&gt;Horario&lt;/b&gt;&lt;hr&gt;- ruta: Ruta&lt;br&gt;- diaSemana: DayOfWeek&lt;br&gt;- hora: LocalTime&lt;br&gt;- cantidadBuses: int&lt;hr&gt;+ cuposConservadores(): int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fillColor=#FFFFFF;fontColor=#1E3E53;strokeColor=#6889A3;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="710" width="410" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p4note" value="&lt;b&gt;Notas de diseño:&lt;/b&gt; cada salida tiene cupos conservadores = cantidadBuses x 23 (hasta confirmar capacidades entre 23 y 29). La lista administrativa muestra nombre, código universitario, viaje y estado; el personal compara con el carnet físico. Los datos de prueba deben ser ficticios y nunca incluir imágenes ni QR del carnet. Sin persistencia: al reiniciar Java, se pierde la información." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FC;fontColor=#294A60;strokeColor=#A3BACD;arcSize=10;align=left;verticalAlign=middle;spacing=14;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="956" width="1415" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e1" value="hereda" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#087F8C;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p4stu" target="p4usu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e2" value="hereda" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#087F8C;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p4adm" target="p4usu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e3" value="usa" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="p4srv" target="p4int">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e4" value="implementa" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#087F8C;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="p4rep" target="p4int">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e5" value="gestiona" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p4srv" target="p4res">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e6" value="corresponde a" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p4res" target="p4via">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e7" value="define salida" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;" edge="1" parent="1" source="p4via" target="p4hor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4e8" value="estado" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=1;html=1;strokeColor=#638198;strokeWidth=1.5;fontSize=12;fontColor=#4D667A;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="p4res" target="p4state">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
